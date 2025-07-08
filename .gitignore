@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-node_modules
-=======
 # OSX
 #
 .DS_Store
@@ -76,4 +73,3 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
->>>>>>> 528b2c0cd1723cfdb96620acd7a7d3edbbe5143f
