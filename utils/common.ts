@@ -1,0 +1,16 @@
+export const theme = {
+  bg: '#191C26',
+  darkBg: '#111319',
+  lightBg: '#1E2230',
+  blueBg: '#208DFE',
+  cyan: '#4DE0D9',
+  cyanLight: '#8DF3ED',
+  cyanDarkLight: '#34D9D1',
+  pinkLight: '#FF9BD0',
+  pinkDarkLight: '#FF73AA',
+  white: '#FFFFFF',
+  grey: '#A6A3B8',
+  darkGrey: '#5C616F',
+  darkGold: '#FDAE67',
+  red: '#FE8270',
+};

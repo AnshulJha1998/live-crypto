@@ -5,31 +5,40 @@
  * @format
  */
 
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { theme } from './utils/common';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
+import Loading from './screens/loading';
+import Auth from './screens/auth';
+import Location from './screens/location';
+
+const Stack = createNativeStackNavigator();
+
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: theme.bg,
+  },
+};
 
 function App() {
   return (
     <SafeAreaView style={styles.main}>
-      <View style={styles.container}>
-        <Text style={styles.text}>HI</Text>
-      </View>
+      <NavigationContainer theme={MyTheme}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Loading" component={Loading} />
+          <Stack.Screen name="Auth" component={Auth} />
+          <Stack.Screen name="Location" component={Location} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  main: { flex: 1 },
-  container: {
-    flex: 1,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'black',
-  },
-  text: {
-    color: 'white',
-  },
+  main: { flex: 1, backgroundColor: theme.bg, fontFamily: 'Roboto' },
 });
-
 export default App;
