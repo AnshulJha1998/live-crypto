@@ -39,6 +39,6 @@ function App() {
 }
 
 const styles = StyleSheet.create({
-  main: { flex: 1, backgroundColor: theme.bg },
+  main: { flex: 1, backgroundColor: theme.bg, fontFamily: 'Roboto' },
 });
 export default App;
